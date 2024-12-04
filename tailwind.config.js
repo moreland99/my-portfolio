@@ -1,8 +1,11 @@
+const plugin = require('flowbite/plugin')
+
 module.exports = {
   darkMode: "class",
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html",
+     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
@@ -16,5 +19,5 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [plugin],
 };
