@@ -10,3 +10,50 @@ body {
 code {
   @apply font-mono bg-gray-100 px-2 py-1 rounded;
 }
+
+/* iPhone Emulator Styles */
+.iphone-frame {
+  position: relative;
+  width: 320px;
+  height: 670px;
+  background-color: #000;
+  border-radius: 50px;
+  border: 2px solid #333; /* Thin border to mimic the frame */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.iphone-screen {
+  width: 300px;
+  height: 640px;
+  background-color: #fff;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle screen shadow */
+}
+
+.iphone-notch {
+  position: absolute;
+  top: 18px;
+  width: 110px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for the notch */
+  z-index: 1;
+}
+
+.iphone-camera {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: 2;
+}
