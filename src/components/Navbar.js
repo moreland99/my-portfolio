@@ -1,33 +1,64 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll"; // For smooth scrolling
+import { Link as RouterLink } from "react-router-dom"; // For routing
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto flex justify-between">
-        <h1 className="text-2xl font-bold">My Portfolio</h1>
-        <ul className="flex space-x-4">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-        </ul>
-      </div>
+    <nav className="bg-gray-800 text-white fixed w-full z-10 py-4 shadow-lg">
+      <ul className="flex justify-center space-x-8">
+        <li>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-blue-400"
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-blue-400"
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-blue-400"
+          >
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="resume"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-blue-400"
+          >
+            Resume
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="cursor-pointer hover:text-blue-400"
+          >
+            Contact
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };
-
-const toggleDarkMode = () => {
-  document.documentElement.classList.toggle("dark");
-};
-
-<button
-  onClick={toggleDarkMode}
-  className="text-secondary ml-4 border border-secondary px-2 py-1 rounded"
->
-  Toggle Dark Mode
-</button>
-
 
 export default Navbar;
