@@ -18,4 +18,16 @@ const Navbar = () => {
   );
 };
 
+const toggleDarkMode = () => {
+  document.documentElement.classList.toggle("dark");
+};
+
+<button
+  onClick={toggleDarkMode}
+  className="text-secondary ml-4 border border-secondary px-2 py-1 rounded"
+>
+  Toggle Dark Mode
+</button>
+
+
 export default Navbar;
